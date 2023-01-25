@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&family=Roboto+Slab&display=swap');
+
+:root {
+  --blue10: #012a4aff;
+  --blue9: #013a63ff;
+  --blue8: #01497cff;
+  --blue7: #014f86ff;
+  --blue6: #2a6f97ff;
+  --blue5: #2c7da0ff;
+  --blue4: #468fafff;
+  --blue3: #61a5c2ff;
+  --blue2: #89c2d9ff;
+  --blue1: #a9d6e5ff;
+}
+
+body.flip {
+  --blue1: #012a4aff;
+  --blue2: #013a63ff;
+  --blue3: #01497cff;
+  --blue4: #014f86ff;
+  --blue5: #2a6f97ff;
+  --blue6: #2c7da0ff;
+  --blue7: #468fafff;
+  --blue8: #61a5c2ff;
+  --blue9: #89c2d9ff;
+  --blue10: #a9d6e5ff;
+}
+
+body.flip .intro h1 {
+  mix-blend-mode: multiply;
+}
+body.flip .intro h2 em,
+body.flip .intro h3 {
+  color: var(--blue4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: var(--blue9);
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--blue10);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+}
+
+nav a  {
+  text-decoration: none;
+  color: var(--blue1);
+  font-size: 1.25rem;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--blue2);
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: 2rem;
+  line-height: 1;
+  max-width: 1024px;
+}
+
+
+.intro span {
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 0 #000;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.intro h1 {
+  font-weight: 400;
+    margin: 0 1rem;
+    line-height: 1.18;
+    font-size: 4em;
+    letter-spacing: .25rem;
+    color: var(--blue1);
+    text-shadow: 3px 3px 6px var(--blue10);
+    mix-blend-mode: screen;
+}
+
+.intro h2 {
+  font-weight: 700;
+  color: var(--blue2);
+  letter-spacing: .2rem;
+  font-size: 2rem;
+}
+
+.intro h2 em {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  letter-spacing: .2rem;
+  line-height: 1.75;
+
+}
+
+.intro h3 {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: .1rem;
+    line-height: 2.25;
+    margin-left: 0.75rem;
+}
+.contact {
+  background-color: var(--blue8);
+  padding: 2rem;
+  color: #fff;
+}
+
+.contact p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: .03rem;
+  max-width: 920px;
+}
+
+.contact a {
+  color: var(--blue1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--blue1);
+  font-size: 1.2rem;
+}
+
+.contact a:hover,
+.contact a:focus {
+  color: #fff;
+}
+
+.contact p em {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--blue1);
+  letter-spacing: .06rem;
+  line-height: 1.75;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+  }
+  
+  label {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: var(--blue3);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  label:hover .slider::before {
+    background-color: #fff;
+  }
+  
+  input {
+    position: absolute;
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  
+  input:checked ~ .slider {
+    background-color: var(--blue1);
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #ffffff95;
+    transition: 0.3s;
+  }
+  
+  input:checked ~ .slider::before {
+    transform: translateX(18px);
+    background-color: var(--blue7);
+  }
+  
+
+img { max-width: 100%; }
+
+footer {
+  background-color: var(--blue10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem;
+  color: var(--blue1);
+  font-size: .75rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+ * {
+    transition: all .2s ease-in-out;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .intro h1 {
+    font-size: 3em;
+  }
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+  .intro h3 {
+    font-size: 1.25rem;
+  }
+  .contact p {
+    font-size: 1rem;
+  }
+  .contact a {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro h1,
+  .intro h3 {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+}
