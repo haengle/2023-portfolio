@@ -78,6 +78,7 @@ const Card = (props) => {
                 {video &&
                     <div className='video-container'>
                     <ReactPlayer 
+                        playsInline
                         url={video} 
                         loop={true}
                         fallback={image}
