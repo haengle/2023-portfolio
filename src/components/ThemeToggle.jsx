@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 
 const ThemeToggle = () => {
 
-    const [theme, setTheme] = useState(
-        localStorage.getItem('theme') || 'normal'
-        );
-        const toggleTheme = () => {
+    const [theme, setTheme] = useState(() => {
+          const stored = localStorage.getItem('theme');
+          return stored ? stored : 'normal';
+        });
+
+        function toggleTheme() {
             if (theme === 'normal') {
                 setTheme('flip');
             } else {

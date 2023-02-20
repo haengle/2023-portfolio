@@ -5,6 +5,9 @@ import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { ExchangeScss, FnbJs, inmoCode, TifbJs, TifbScss } from './codeSamples';
 import local from './images/local-chart.png';
 import exchange from './images/exchange.jpg';
+import inmo from './images/inmo.jpg';
+import tifb from './images/tifb.png';
+import henning from './images/henning.jpg';
 
 function App() {
 
@@ -51,6 +54,7 @@ function App() {
             summary="'This is INMO+' is the client-facing marketing site used to drive sales for Kasasa's online account opening product, INMO+. As the lead engineer, I worked with internal stakeholders to bring the approved design mockups to life. I worked closely with the lead designer to build custom SVG animations with GSAP and ScrollMagic."
             siteLink="https://www.thisisinmoplus.com"
             video={`${process.env.PUBLIC_URL}/videos/inmoplus.webm`}
+            videoFallback={inmo}
             codeJs={inmoCode}
           />
 
@@ -59,6 +63,7 @@ function App() {
             summary="'This is FIRSTBranch' is the customer-facing marketing site used to drive sales for Kasasa's website product, FIRSTBranch. As the lead engineer, I worked with internal stakeholders to bring the approved design mockups to life by leveraging custom SVG animations and scroll interaction."
             siteLink="https://www.thisisfirstbranch.com"
             video={`${process.env.PUBLIC_URL}/videos/tifb.webm`}
+            videoFallback={tifb}
             codeJs={TifbJs}
             codeCss={TifbScss}
           />  
@@ -87,6 +92,7 @@ function App() {
             summary="I created a custom CSS-based animation for the homepage banner and a jQuery/CSS solution for features that fade in as the user scrolls."
             siteLink="https://www.fnbhenning.com"
             video={`${process.env.PUBLIC_URL}/videos/fnb.webm`}
+            videoFallback={henning}
             codeJs={FnbJs}
           />   
         </section>

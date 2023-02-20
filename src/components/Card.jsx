@@ -16,7 +16,17 @@ const Card = (props) => {
     const onOpenModal = () => setOpen(true);
     const onCloseModal = () => setOpen(false);
 
-    const { siteLink, image, imageDesc, title, summary, video, codeJs, codeCss } = props;
+    const { 
+        siteLink, 
+        image, 
+        imageDesc, 
+        title, 
+        summary, 
+        video, 
+        videoFallback,
+        codeJs, 
+        codeCss 
+    } = props;
 
     const hasCode = codeJs || codeCss;
 
@@ -28,7 +38,7 @@ const Card = (props) => {
                 </h2>
                 <div className='header-buttons'>
                 {siteLink &&
-                    <a href="{siteLink}" target="_blank" rel="noopener" className="site-link">
+                    <a href={siteLink} target="_blank" rel="noopener" className="site-link">
                     Visit Site 
                     <FontAwesomeIcon icon={solid('external-link-alt')} />
                     </a>        
@@ -78,16 +88,18 @@ const Card = (props) => {
                 {video &&
                     <div className='video-container'>
                     <ReactPlayer 
-                        playsInline
+                        muted
                         url={video} 
                         loop={true}
-                        fallback={image}
                         controls
                         className='react-player'
                         playing
                         width='100%'
                         height='100%'
                         />
+                        <div className='video-fallback'>
+                         <img src={videoFallback} alt={title} />
+                        </div>
                     </div>
                 }
             </div>
