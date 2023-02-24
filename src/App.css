@@ -50,13 +50,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background-color: var(--blue9);
-  display: flex;
-  flex-direction: column;
-}
-
 nav {
+  height: 3rem;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -71,102 +66,21 @@ nav {
 nav a  {
   text-decoration: none;
   color: var(--blue1);
-  font-size: 1.25rem;
-}
-
-nav a:hover,
-nav a:focus {
-  color: var(--blue2);
-}
-
-.intro {
+  font-size: .85rem;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  padding: 2rem;
-  line-height: 1;
-  max-width: 1024px;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-
-.intro span {
-  color: #fff;
-  font-size: 1.5rem;
-  text-shadow: 2px 2px 0 #000;
-  font-weight: 400;
-  line-height: 2;
-}
-
-.intro h1 {
-  font-weight: 400;
-    margin: 0 1rem;
-    line-height: 1.18;
-    font-size: 4em;
-    letter-spacing: .25rem;
-    color: var(--blue1);
-    text-shadow: 3px 3px 6px var(--blue10);
-    mix-blend-mode: screen;
-}
-
-.intro h2 {
-  font-weight: 700;
-  color: var(--blue2);
-  letter-spacing: .2rem;
-  font-size: 2rem;
-}
-
-.intro h2 em {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #fff;
-  letter-spacing: .2rem;
-  line-height: 1.75;
-
-}
-
-.intro h3 {
-  color: #fff;
-  font-weight: 400;
-  letter-spacing: .1rem;
-    line-height: 2.25;
-    margin-left: 0.75rem;
-}
-.contact {
-  background-color: var(--blue8);
-  padding: 2rem;
-  color: #fff;
-}
-
-.contact p {
+nav svg {
   font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.75;
-  letter-spacing: .03rem;
-  max-width: 920px;
 }
 
-.contact a {
-  color: var(--blue1);
-  text-decoration: none;
-  border-bottom: 1px solid var(--blue1);
-  font-size: 1.2rem;
-}
-
-.contact a:hover,
-.contact a:focus {
+nav a:hover span,
+nav a:focus span {
   color: #fff;
 }
-
-.contact p em {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--blue1);
-  letter-spacing: .06rem;
-  line-height: 1.75;
-}
-
+/* 
 .toggle-switch {
     position: relative;
     width: 40px;
@@ -219,9 +133,14 @@ nav a:focus {
     transform: translateX(18px);
     background-color: var(--blue7);
   }
-  
+   */
 
 img { max-width: 100%; }
+
+.contents {
+  position: relative;
+  z-index: 5;
+}
 
 footer {
   background-color: var(--blue10);
@@ -240,28 +159,3 @@ footer {
   }
 }
 
-@media screen and (max-width: 920px) {
-  .intro h1 {
-    font-size: 3em;
-  }
-  .intro h2 {
-    font-size: 1.5rem;
-  }
-  .intro h3 {
-    font-size: 1.25rem;
-  }
-  .contact p {
-    font-size: 1rem;
-  }
-  .contact a {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .intro h1,
-  .intro h3 {
-    margin-left: 0;
-    margin-bottom: 1rem;
-  }
-}

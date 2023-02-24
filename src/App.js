@@ -1,7 +1,5 @@
-import { Card, ThemeToggle } from './components'
+import { Card, Nav, Header, Contact } from './components'
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro' 
 import { ExchangeScss, FnbJs, inmoCode, TifbJs, TifbScss } from './codeSamples';
 import local from './images/local-chart.png';
 import exchange from './images/exchange.jpg';
@@ -12,41 +10,14 @@ import henning from './images/henning.jpg';
 function App() {
 
   return (
-      <main>
-        <nav>
-          <ThemeToggle />
-          
-          <a href={`${process.env.PUBLIC_URL}/HeatherEngleResume.pdf`} title="Download my resume" rel="noopener" target="_blank">
-            <FontAwesomeIcon icon={solid('file-pdf')} />
-          </a>
-          
-          <a href="https://www.instagram.com/heatherengle" rel="noopener" target="_blank" title="Follow me on Instagram">
-            <FontAwesomeIcon icon={brands('instagram')} />
-          </a>
-          <a href="https://www.github.com/haengle" rel="noopener" target="_blank" title="Find me on github">
-          <FontAwesomeIcon icon={brands('github')} />
-          </a>
-          
-         
-      </nav>
-        <header>
-        
-          <div className='intro'>
-            <span> Hi 👋, I'm</span> 
-            <h1>Heather Engle</h1>
-            <h2>A <em>design-focused</em> front end developer</h2>
-            <h3>in Austin, TX 🤠</h3>
-          </div>
-          <div className='contact'>
-            <p>I focus on <em>UX & Accessibility</em>, with a passion for delivering <em>exceptional user experiences.</em> <a href="mailto:h.a.engle@gmail.com" title="Email me">
-            Email me
-          </a>, find me on <a href="https://www.linkedin.com/in/heatherengle" rel="noopener" target="_blank" title="LinkedIn">
-          LinkedIn
-          </a>, or meet my <a href="https://keen-melba-f0a407.netlify.app/" rel="noopener" target="_blank" title="Meet my cats">
-           cats
-          </a>.</p>
-          </div>
-        </header>
+      <>
+        <Nav />
+
+        <Header />
+
+        <main>
+
+        <Contact />
 
         <section className='contents'>
           <Card 
@@ -96,13 +67,14 @@ function App() {
             codeJs={FnbJs}
           />   
         </section>
+        </main>
 
         <footer>
           <p>
             &copy; {new Date().getFullYear()} Heather Engle. Built with React
           </p>
         </footer>
-    </main>
+    </>
   );
 }
 export default App;
