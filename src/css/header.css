@@ -8,6 +8,14 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     height: 520px;
+
+    background-image: url('../images/atx.jpg');
+}
+
+@supports (background-image: url('../images/atx.webp')) {
+  header {
+    background-image: url('../images/atx.webp');
+  }
 }
 
 
@@ -32,34 +40,6 @@ header::before {
     }
 }
 
-.header-position {
-    position: fixed;
-    left: 0;
-    top: 0;
-}
-
-
-.header-bg-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.header-bg-caption {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    padding: .5rem;
-    font-size: 10px;
-    color: #fff;
-    background: rgba(0,0,0,0.5);
-}
-
-.header-bg-caption a {
-    color: #fff;
-}
-
 .intro {
     display: flex;
     flex-wrap: wrap;
@@ -73,7 +53,7 @@ header::before {
   }
   
   
-  .intro span {
+  .intro > span {
     color: #fff;
     font-size: 1.5rem;
     text-shadow: 2px 2px 0 #000;
@@ -87,9 +67,12 @@ header::before {
       line-height: 1.18;
       font-size: 4em;
       letter-spacing: .25rem;
-      background: #fff;
+      /*background: #fff;*/
       color: #000;
       mix-blend-mode: multiply;
+      background: linear-gradient(to right, #fff 0%, #fff 50%, transparent 50%, transparent 100%);
+      background-size: 220%;
+      background-position: 95%;
   }
   
   .intro h2 {
@@ -100,6 +83,24 @@ header::before {
     margin-top: 1rem;
     line-height: 1.3;
   }
+
+  .intro h2  {
+    background-image: 
+    linear-gradient(to right, var(--blue2), white, var(--blue1)); 
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .intro h2 {
+      animation: move 10s linear infinite;
+     }
+
+    .animate {
+      animation: animate 2.5s ease-in 0.5s 1 forwards;
+    }
+   }
   
 
   @media screen and (max-width: 920px) {
@@ -126,15 +127,18 @@ header::before {
     }
   }
 
-  .animate {
-    animation: animate 1s ease-in-out;
-  }
 
   @keyframes animate {
     0% {
-      color: #fff
+      background-position: 95%;
     }
     100% {
-      color: #000
+      background-position: 2%;
+    }
+  }
+
+  @keyframes move {
+    to {
+      background-position: 300%;
     }
   }
