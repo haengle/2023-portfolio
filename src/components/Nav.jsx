@@ -5,7 +5,7 @@ export default function Nav() {
     return (
         <nav>
           
-          <a href={`${process.env.PUBLIC_URL}/HeatherEngleResume.pdf`} title="Download my resume" rel="noopener" target="_blank">
+          <a href={`${process.env.PUBLIC_URL}/resume`} title="View my resume" rel="noopener" target="_blank">
             <FontAwesomeIcon icon={solid('file-pdf')} /> <span>Resume</span>
           </a>
           
