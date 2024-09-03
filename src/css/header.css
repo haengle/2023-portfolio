@@ -9,16 +9,11 @@ header {
 	justify-content: flex-end;
 	height: 520px;
 
-	background-image: url("../images/atx.jpg");
+	background-image: url("../images/lex.jpeg");
 }
 
-@supports (background-image: url("../images/atx.webp")) {
-	header {
-		background-image: url("../images/atx.webp");
-	}
-}
-
-header::before {
+header::before,
+header::after {
 	content: "";
 	position: absolute;
 	top: bottom;
@@ -28,6 +23,11 @@ header::before {
 	background: linear-gradient(0deg, var(--blue10) 30%, rgba(0, 0, 0, 0) 100%);
 }
 
+header::after {
+	background: var(--blue10);
+	opacity: 0.5;
+}
+
 @media screen and (min-width: 520px) {
 	header {
 		height: calc(100vh - 3rem);
@@ -35,7 +35,7 @@ header::before {
 	}
 
 	header::before {
-		height: 40%;
+		height: 80%;
 	}
 }
 

@@ -1,161 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&family=Roboto+Slab&display=swap");
 
 :root {
-  --blue10: #012a4aff;
-  --blue9: #013a63ff;
-  --blue8: #01497cff;
-  --blue7: #014f86ff;
-  --blue6: #2a6f97ff;
-  --blue5: #2c7da0ff;
-  --blue4: #468fafff;
-  --blue3: #61a5c2ff;
-  --blue2: #89c2d9ff;
-  --blue1: #a9d6e5ff;
-}
-
-body.flip {
-  --blue1: #012a4aff;
-  --blue2: #013a63ff;
-  --blue3: #01497cff;
-  --blue4: #014f86ff;
-  --blue5: #2a6f97ff;
-  --blue6: #2c7da0ff;
-  --blue7: #468fafff;
-  --blue8: #61a5c2ff;
-  --blue9: #89c2d9ff;
-  --blue10: #a9d6e5ff;
-}
-
-body.flip .intro h1 {
-  mix-blend-mode: multiply;
-}
-body.flip .intro h2 em,
-body.flip .intro h3 {
-  color: var(--blue4);
+	--blue10: #012a4aff;
+	--blue9: #013a63ff;
+	--blue8: #01497cff;
+	--blue7: #014f86ff;
+	--blue6: #2a6f97ff;
+	--blue5: #2c7da0ff;
+	--blue4: #468fafff;
+	--blue3: #61a5c2ff;
+	--blue2: #89c2d9ff;
+	--blue1: #a9d6e5ff;
+	--battleship-gray: #938d7cff;
+	--walnut-brown: #54524aff;
+	--columbia-blue: #b9ced8ff;
+	--battleship-gray-2: #8f908bff;
+	--black-olive: #423f32ff;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
+	box-sizing: border-box;
+	margin: 0;
 }
 
 body {
-  min-height: 100vh;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	font-size: 1rem;
+	font-family: "Poppins", sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 nav {
-  height: 3rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: var(--blue10);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1rem;
-  padding: .5rem;
+	height: 3rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	background-color: var(--blue10);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.5rem;
 }
 
-nav a  {
-  text-decoration: none;
-  color: var(--blue1);
-  font-size: .85rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+nav a {
+	text-decoration: none;
+	color: var(--blue1);
+	font-size: 0.85rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 nav svg {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 nav a:hover span,
 nav a:focus span {
-  color: #fff;
+	color: #fff;
 }
-/* 
-.toggle-switch {
-    position: relative;
-    width: 40px;
-    height: 20px;
-  }
-  
-  label {
-    position: absolute;
-    width: 100%;
-    height: 20px;
-    background-color: var(--blue3);
-    border-radius: 20px;
-    cursor: pointer;
-  }
 
-  label:hover .slider::before {
-    background-color: #fff;
-  }
-  
-  input {
-    position: absolute;
-    display: none;
-  }
-  
-  .slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    transition: 0.3s;
-  }
-  
-  input:checked ~ .slider {
-    background-color: var(--blue1);
-  }
-  
-  .slider::before {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 4px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #ffffff95;
-    transition: 0.3s;
-  }
-  
-  input:checked ~ .slider::before {
-    transform: translateX(18px);
-    background-color: var(--blue7);
-  }
-   */
-
-img { max-width: 100%; }
+img {
+	max-width: 100%;
+}
 
 .contents {
-  position: relative;
-  z-index: 5;
+	position: relative;
+	z-index: 5;
 }
 
 footer {
-  background-color: var(--blue10);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: .5rem;
-  color: var(--blue1);
-  font-size: .75rem;
+	background-color: var(--blue10);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.5rem;
+	color: var(--blue1);
+	font-size: 0.75rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
- * {
-    transition: all .2s ease-in-out;
-  }
+	* {
+		transition: all 0.2s ease-in-out;
+	}
 }
-

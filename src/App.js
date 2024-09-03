@@ -53,11 +53,12 @@ function App() {
           <Card 
             title="Exchange Bank"
             summary="This custom promotional area displays a different image when each feature is interacted with, I created a CSS-only solution for the transitions while keeping the area client-editable in the CMS."
-            siteLink="https://www.thelocalcreditunion.com/accounts/personal-checking/compare-accounts.html"
+            siteLink="https://www.ebt.bank/"
             image={exchange}
             codeCss={ExchangeScss}
             imageDesc="Exchange bank homepage"
           />  
+          
           <Card 
             title="First National Bank"
             summary="I created a custom CSS-based animation for the homepage banner and a jQuery/CSS solution for features that fade in as the user scrolls."
